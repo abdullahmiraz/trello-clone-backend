@@ -7,4 +7,6 @@ const fileUploadController = require("../controllers/fileUploadController");
 router.post("/upload", fileUploadController.upload);
 router.get("/folder-details", fileUploadController.getFolderDetails);
 
+
+
 module.exports = router;
