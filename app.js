@@ -13,13 +13,12 @@ app.use(express.urlencoded({ extended: true }));
 
 // routes
 const taskRoutes = require("./routes/taskRoute");
-
-mongoose
-  .connect(process.env.MONGO_URI, {})
-  .then(() => console.log("MongoDB Connected"))
-  .catch((err) => console.log(err));
-
 app.use("/api", taskRoutes);
+
+// mongoose
+//   .connect(process.env.MONGO_URI, {})
+//   .then(() => console.log("MongoDB Connected"))
+//   .catch((err) => console.log(err));
 
 //   making sure to export
 module.exports = app;
